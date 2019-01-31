@@ -12,7 +12,7 @@
             dirname(__DIR__, 1)
         );
 
-        FontService::create($config)->run();
+        FontScrapper::create($config)->run();
 
     } catch (\Exception $e) {
 

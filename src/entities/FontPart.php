@@ -7,7 +7,7 @@
      * Time: 9:31
      */
 
-    namespace font_scrapper;
+    namespace font_scrapper\entities;
 
 
     class FontPart

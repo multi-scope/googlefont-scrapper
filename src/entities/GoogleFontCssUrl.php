@@ -7,7 +7,7 @@
      * Time: 14:04
      */
 
-    namespace font_scrapper;
+    namespace font_scrapper\entities;
 
 
     class GoogleFontCssUrl

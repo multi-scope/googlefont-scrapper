@@ -10,12 +10,14 @@
     namespace font_scrapper;
 
 
+    use font_scrapper\entities\FontPart;
+    use font_scrapper\entities\GoogleFontCssUrl;
     use GuzzleHttp\Client;
     use GuzzleHttp\Pool;
     use GuzzleHttp\Psr7\Request;
     use GuzzleHttp\Psr7\Response;
 
-    class FontService
+    class FontScrapper
     {
         /** @var GoogleFontCssUrl */
         private $fontCssUrl;
@@ -165,7 +167,7 @@
 
 
         /**
-         * @return FontService
+         * @return FontScrapper
          * @throws \GuzzleHttp\Exception\GuzzleException
          */
         public function parseParts(): self
@@ -226,7 +228,7 @@
         /**
          * @param null $isToReload
          *
-         * @return FontService
+         * @return FontScrapper
          * @throws \GuzzleHttp\Exception\GuzzleException
          */
         public function loadCssFile($isToReload = null): self
