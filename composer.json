@@ -1,0 +1,37 @@
+{
+  "name": "multi-scope/googlefont-scrapper",
+  "description": "Client for downloading selected fonts from https://fonts.google.com for local connection",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "multi-scope",
+      "email": "multi-scope@yandex.ru"
+    }
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "config": {
+    "process-timeout": 1800,
+    "optimize-autoloader": true,
+    "prestissimo": {
+      "maxConnections": 10,
+      "minConnections": 3,
+      "pipeline": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "font_scrapper\\": "src"
+    }
+  }
+}
